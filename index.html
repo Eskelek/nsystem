@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>N-System</title>
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="grid.css">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="N-system">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin-ext" rel="stylesheet">
+</head>
+<body>
+    <header id="particles-js">
+        <nav id="head">
+            <ul class="col-12 row">
+                <li class="col-3 menuButton" id="head"><img src="images/N-Systemlogo.JPG"></li>
+                <li class="col-3 menuButton" id="choose">Usługi</li>
+                <li class="col-3 menuButton" id="cert">Certyfikaty</li>
+                <li class="col-3 menuButton" id="footer">Kontakt</li>
+            </ul>
+        </nav>
+        <div class="navDetails col-6">
+            <img class="col-12" src="images/N-Systemlogo.jpg">
+            <h2 class="fade">Systemy zabezpieczeń i automatyka</h2>
+            <h4 class="fade">Kołaczyce</h4>
+            <button class="col-4" id="navBtn">O Nas</button>
+        </div>
+        <div class="aboutUs col-12 container">
+            <h1>O Nas</h1>
+            <p id="p1">Jesteśmy firmą z kilkuletnim doświadczeniem. Naszym priorytetem jest zadowolenie klienta. Staramy się zadbać o to, aby nasz klient....</p>
+            <p id="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+            <p id="p3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntn</p>
+            <p id="p4">Posiadane przez nas certyfikaty są gwarancją wysokiej jakości świadczonych usług</p>
+            <button class="col-2" id="rollBtn">zwiń</button>
+        </div>
+        <div class="btnD arrow">
+            <i class="fa fa-angle-double-down arrow" aria-hidden="true"></i>
+        </div>
+    </header>
+    <section class="cert col-12">
+        <div class="certGallery row">
+            <h1 class="col-3">Nasze<br>Certyfikaty</h1>
+            <div class="certBox col-4">
+                <img id="benica" src="images/benincaCert.jpg">
+            </div>
+            <div class="certBox col-5">
+                <img id="faac" src="images/faacCert.jpg">
+            </div>
+        </div>
+    </section>
+    <section class="choose col-12 row">
+        <div class="camCard col-6 card">
+            <div class="klik" id="camKlik">
+                <h1>Systemy<br>Zabezpieczeń</h1>
+            </div>
+        </div>
+        <div class="automatCard col-6 card">
+            <div class="klik" id="autoKlik">
+                <h1>Automatyka</h1>
+            </div>
+        </div>
+        <div class="product inVisible col-12" id="camSec">
+            <div class="camOffer offer col-12">
+                <h1>Systemy Zabezpieczeń</h1>
+                <h3>Oferujemy sprzedaż i montaż:</h3>
+                <ul class="container">
+                    <li>alarmy antywłamaniowe przewodowe i bezprzewodowe</li>
+                    <li>Monitoring wizyjny - kamery cyfrowe IP oraz analogowe</li>
+                    <li>Kontrola dostępu</li>
+                </ul>
+            </div>
+            <div class="realGallery col-12" id="gal">
+                
+            </div>
+        </div>
+        <div class="product inVisible col-12" id="autSec">
+            <div class="autOffer col-12 offer">
+                <h1>Automatyka</h1>
+                <h3>Oferujemy sprzedaż i montaż:</h3>
+                <ul>
+                    <li>Napedy do bram</li>
+                    <li>Domofony</li>
+                </ul>
+            </div>
+            <div class="realGallery col-12">
+                
+            </div>
+        </div>
+    </section>
+    <footer class="last col-12 row footer">
+        <div class="col-7 map">
+            <iframe class="col-10" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1287.4019132843948!2d21.43255480383911!3d49.808555656567165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473db1ae157f26a5%3A0xa0066e1bad113445!2sMickiewicza+8%2C+38-213+Ko%C5%82aczyce!5e0!3m2!1spl!2spl!4v1528213580651" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="col-5 info">
+            <div class="col-12 contact">
+                <h1>Kontakt</h1>
+                <p>Łukasz Niziołek</p> 
+                <p>Tel. 794-264-802</p>
+                <p>Ul. Mickiewicza 8 </p>
+                <p>38-213 Kołaczyce</p>
+            </div>
+            <div class="col-12 navi">
+                <ul class="col-12">
+                    <li class="col-12">O Nas</li>
+                    <li class="col-12">Usługi</li>
+                    <li class="col-12">Certyfikaty</li>
+                </ul>
+            </div>
+        </div>
+        <div class="made col-12">
+            <h1>cop</h1>
+        </div>
+    </footer>
+    <script type="text/javascript" src="particles.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

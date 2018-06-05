@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif; }
+
+/*Colors */
+/* */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+[class*="col-"] {
+  float: left;
+  min-height: 1px;
+  padding: 1px; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px; }
+
+.row::before,
+.row::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.inVisible {
+  opacity: 0;
+  display: none; }
+
+.visible {
+  display: block; }
+
+body #particles-js {
+  overflow: hidden;
+  height: 100vh; }
+body header {
+  position: relative;
+  height: 100vh;
+  background: #fff;
+  overflow-x: hidden; }
+  body header nav {
+    background: #006599;
+    color: #fff;
+    height: 80px; }
+    body header nav ul {
+      height: 80px;
+      list-style-type: none; }
+      body header nav ul li {
+        background: #006599;
+        cursor: pointer;
+        line-height: 70px;
+        height: 70px;
+        margin-top: 5px;
+        font-size: 35px;
+        text-align: center;
+        transition: 0.5s; }
+        body header nav ul li img {
+          width: 50%;
+          margin-top: 10px; }
+  body header .navDetails {
+    z-index: 2;
+    height: 300px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    transition: 2s; }
+    body header .navDetails h2, body header .navDetails h4 {
+      line-height: 30px;
+      font-weight: lighter;
+      font-size: 18px;
+      letter-spacing: 4px; }
+    body header .navDetails h2 {
+      padding-bottom: 10px;
+      font-size: 27px;
+      letter-spacing: 5px; }
+    body header .navDetails button {
+      cursor: pointer;
+      font-size: 24px;
+      font-weight: bolder;
+      margin-top: 30px;
+      height: 50px;
+      border: 2px solid #006599;
+      background: transparent;
+      color: #006599;
+      border-radius: 25px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: 1s; }
+      body header .navDetails button:hover {
+        transform: scale(1.05) translateX(-47.5%);
+        font-size: 26px; }
+  body header .aboutUs {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    height: 30%;
+    transform: translateX(-50%);
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: 2s;
+    text-align: center;
+    padding: 1% 1% 10% 1%; }
+    body header .aboutUs h1 {
+      transform: translateX(150%);
+      padding: 10px;
+      font-size: 40px;
+      transition: 1.5s; }
+    body header .aboutUs p {
+      transform: translateX(250%);
+      line-height: 30px;
+      padding: 5px;
+      font-size: 24px;
+      transition: 2s; }
+    body header .aboutUs #p2 {
+      transform: translateX(300%);
+      transition: 3s; }
+    body header .aboutUs #p3 {
+      transform: translateX(400%);
+      transition: 4s; }
+    body header .aboutUs #p4 {
+      transform: translateX(500%);
+      transition: 4s; }
+    body header .aboutUs button {
+      cursor: pointer;
+      font-size: 24px;
+      margin-top: 10px;
+      height: 40px;
+      border: none;
+      background: #006599;
+      color: #fff;
+      border-radius: 20px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: 1s; }
+      body header .aboutUs button:hover {
+        transform: scale(1.05) translateX(-47.5%);
+        font-size: 26px; }
+  body header .btnD {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid #333;
+    background: #006599;
+    text-align: center; }
+    body header .btnD i {
+      animation: down linear 1.5s infinite;
+      color: #fff;
+      cursor: pointer;
+      font-size: 60px; }
+body .cert {
+  padding: 0;
+  position: relative;
+  height: 600px;
+  text-align: center;
+  background: transparent; }
+  body .cert h1 {
+    margin-top: 180px;
+    color: #000;
+    font-size: 60px; }
+  body .cert .certGallery {
+    height: 580px;
+    margin: 0; }
+    body .cert .certGallery .certBox {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      justify-content: center; }
+      body .cert .certGallery .certBox img {
+        height: 550px;
+        display: flex;
+        transition: 1.5s; }
+        body .cert .certGallery .certBox img:hover {
+          transform: scale(1.2);
+          z-index: 3; }
+body .choose {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+  height: 800px;
+  position: relative; }
+  body .choose .card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    cursor: pointer; }
+    body .choose .card .klik {
+      height: 100%;
+      width: 100%;
+      text-align: center; }
+      body .choose .card .klik h1 {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 50px;
+        line-height: 60px;
+        color: #fff;
+        text-shadow: 0px 0px 8px #000; }
+  body .choose .camCard {
+    background: url("images/monitoring.jpeg");
+    background-size: cover;
+    background-position: right;
+    transition: 1.5s; }
+    body .choose .camCard:hover {
+      transform: perspective(2000px) rotateY(15deg) scale(1.1); }
+  body .choose .automatCard {
+    left: 50%;
+    background: url("images/aut.jpg");
+    background-size: cover;
+    background-position: left;
+    transition: 1.5s; }
+    body .choose .automatCard:hover {
+      transform: perspective(2000px) rotateY(-15deg) scale(1.1); }
+  body .choose .product {
+    padding: 0;
+    background: #fff;
+    text-shadow: 0 0 5px #000;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px; }
+    body .choose .product h1 {
+      padding: 15px;
+      font-size: 40px; }
+    body .choose .product h3 {
+      padding: 10px;
+      font-size: 30px; }
+    body .choose .product ul li {
+      display: block;
+      margin-left: 20%;
+      padding: 10px;
+      font-size: 25px;
+      text-align: left; }
+    body .choose .product .offer {
+      height: 600px; }
+    body .choose .product .camOffer {
+      background: url("images/camChrom.jpeg");
+      background-size: cover;
+      background-position: left; }
+    body .choose .product .autOffer {
+      background: url("images/automat.jpg");
+      background-size: cover;
+      background-position: center; }
+    body .choose .product .realGallery {
+      background: url("images/slupK.jpeg");
+      background-position: center;
+      background-size: cover;
+      height: 100vh;
+      position: relative; }
+body .last {
+  position: relative;
+  background: #333;
+  height: 600px; }
+  body .last .info {
+    height: 600px; }
+    body .last .info .contact {
+      padding-top: 40px;
+      height: 300px;
+      text-align: center;
+      color: #fff; }
+      body .last .info .contact h1 {
+        font-size: 30px;
+        line-height: 40px; }
+      body .last .info .contact p {
+        font-size: 22px;
+        line-height: 30px; }
+    body .last .info .navi {
+      height: 300px; }
+      body .last .info .navi ul {
+        padding: 30px; }
+        body .last .info .navi ul li {
+          text-align: center;
+          color: #fff;
+          list-style-type: none;
+          font-size: 25px;
+          line-height: 30px; }
+  body .last .map {
+    position: relative; }
+    body .last .map iframe {
+      float: none;
+      display: block;
+      margin: 30px auto;
+      height: 500px; }
+  body .last .made {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    height: 40px;
+    color: #fff; }
+
+/*# sourceMappingURL=style.css.map */
