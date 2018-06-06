@@ -42,12 +42,14 @@ $(function () {
     });
     
     
-	const camKlik =$("#camKlik").click(function() { chooseSection("1");});
-    const autoKlik = $("#autoKlik").click(function() { chooseSection("2");});
-    
-    
+	$(".kli").click(function() { chooseSection();});
     function chooseSection (a) {
-        const cSection = $("#camSec");
+        console.log("a");
+        $(".inner").animate({opacity: "0"});
+        $(".offer").animate({opacity: "1"});
+        $(".offer").css({display: "block"});
+        
+        /*const cSection = $("#camSec");
         const aSection = $("#autSec");
         const chooseS = $(".choose");
         const bcard = $(".automatCard");
@@ -68,12 +70,66 @@ $(function () {
             $(aSection).removeClass("inVisible");
             $(aSection).addClass("visible");
             $(chooseS).css({height: "auto"});
-        }
+        }*/
     }
     
-    function display () {
-        console.log("naciska");
+    //slider
+    var slide = $(".slide"),
+        tape = $(".slideTape"),
+        intervalId;
+    
+    intervalId = setInterval(changeRightSlide, 4000);
+    
+    var rArrowClick = $("#changeSlide .fa-chevron-right");
+    var lArrowClick = $("#changeSlide .fa-chevron-left");
+    
+    $(rArrowClick).click(function() {
+        changeRightSlide();
+    });
+    $(lArrowClick).click(function() {
+        changeLeftSlide();
+    })
+    
+    function changeRightSlide() {
+        tape.animate({marginLeft: "-100%"},1500, moveFirstSlide);
+        tape.animate({animation: "opacityTo 1s linear"})
     }
+    function changeLeftSlide() {
+        moveLastSlide();
+        tape.animate({marginLeft: 0},1500);
+    }
+    
+    function moveFirstSlide () {
+        var firstItem = tape.find("li:first");
+        var lastItem = tape.find("li:last");
+        lastItem.after(firstItem);
+        tape.css({marginLeft: 0});
+    }
+    
+    function moveLastSlide() {
+        var firstItem = tape.find("li:first");
+        var lastItem = tape.find("li:last");
+        
+        firstItem.before(lastItem);
+        tape.css({marginLeft:  "-100%"});
+    }
+    var swap = $("#changeSlide");
+    var image = $(".image");
+    
+    $(swap).mouseover(function() {
+        clearInterval(intervalId);
+    });
+    $(swap).mouseout(function() {
+        intervalId = setInterval(changeRightSlide, 4000);
+    });
+    $(image).mouseover(function() {
+        clearInterval(intervalId);
+    });
+    $(image).mouseout(function() {
+        intervalId = setInterval(changeRightSlide, 4000);
+    });
+    
+    
     const arrowDown = $(".arrow").click(function (e) {
         
         let windowHeight = window.innerHeight;
