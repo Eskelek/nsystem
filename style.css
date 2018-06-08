@@ -173,9 +173,11 @@ body .interest {
   top: 0;
   left: 0;
   z-index: -3;
-  height: 300px;
-  background: url("images/kamerySiatka.jpeg");
-  background-position: 0% 20%; }
+  height: 400px;
+  background: url("images/bramaAuto.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 0 60%; }
 body .interestTwo {
   position: fixed;
   top: 50%;
@@ -185,6 +187,17 @@ body .interestTwo {
   background: url("https://images.pexels.com/photos/1106433/pexels-photo-1106433.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
   background-position: 0% 20%;
   background-size: 100%; }
+body .null {
+  height: 350px;
+  position: relative;
+  background: url("images/kamCzerwonaCegla.jpg");
+  background-position: 50% 30%;
+  background-size: cover;
+  background-repeat: none;
+  z-index: -4; }
+body #null2 {
+  background: #333;
+  z-index: -10; }
 body .cert {
   padding: 0;
   position: relative;
@@ -213,17 +226,6 @@ body .cert {
         body .cert .certGallery .certBox img:hover {
           transform: scale(1.2);
           z-index: 3; }
-body .null {
-  height: 300px;
-  position: relative;
-  background: url("https://images.pexels.com/photos/247932/pexels-photo-247932.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
-  background-position: 50% 30%;
-  background-size: 80%;
-  background-repeat: none;
-  z-index: -4; }
-body #null2 {
-  background: #333;
-  z-index: -10; }
 body .choose {
   margin: 0 0 0 0;
   padding: 0;
@@ -416,7 +418,8 @@ body .last {
           margin-top: 5px; }
           body .last .info .share .inShare .icons a {
             color: #000;
-            height: 60px; }
+            height: 60px;
+            text-decoration: none; }
           body .last .info .share .inShare .icons .fa {
             font-size: 30px;
             line-height: 60px;
