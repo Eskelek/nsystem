@@ -1,6 +1,6 @@
 $(function () {
     'use strict';
-    
+    //pokazywanie "o nas"
     $("#navBtn").click(function() { 
         $(".navDetails").css({top: "120px"});
         $(this).css({opacity: "0"});
@@ -12,7 +12,7 @@ $(function () {
         $("#p3").css({transform: "translateX(0)"});
         $("#p4").css({transform: "translateX(0)"});
     });
-    
+    //chowanie "o nas"
     $("#rollBtn").click(function() {
         $(".navDetails").css({top: "30%"});
         $("#navBtn").css({opacity: "1"});

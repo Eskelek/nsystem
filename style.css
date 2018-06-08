@@ -43,24 +43,56 @@ body header {
   background: #fff;
   overflow-x: hidden; }
   body header nav {
+    padding: 0;
     background: #006599;
     color: #fff;
     height: 80px; }
     body header nav ul {
+      padding: 0;
       height: 80px;
       list-style-type: none; }
       body header nav ul li {
+        padding: 0;
         background: #006599;
-        cursor: pointer;
-        line-height: 70px;
-        height: 70px;
-        margin-top: 5px;
+        height: 80px;
         font-size: 35px;
-        text-align: center;
-        transition: 0.5s; }
+        text-align: center; }
         body header nav ul li img {
           width: 50%;
-          margin-top: 10px; }
+          margin-top: 15px; }
+        body header nav ul li .anim {
+          cursor: pointer;
+          padding: 0;
+          margin-top: 15px;
+          height: 50px;
+          border-radius: 10px;
+          position: relative;
+          transition: 1s; }
+          body header nav ul li .anim:before, body header nav ul li .anim:after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            transition: 1s;
+            opacity: 0; }
+          body header nav ul li .anim:before {
+            top: -12%;
+            left: 0%;
+            transform: translate(200%, 50%);
+            border-top: 3px solid #fff;
+            border-left: 3px solid #fff; }
+          body header nav ul li .anim:after {
+            right: 0%;
+            bottom: -12%;
+            transform: translate(-200%, -50%);
+            border-bottom: 3px solid #fff;
+            border-right: 3px solid #fff; }
+          body header nav ul li .anim:hover {
+            transform: scale(1.1);
+            text-shadow: 0 0 10px #333; }
+            body header nav ul li .anim:hover:before, body header nav ul li .anim:hover:after {
+              transform: translate(0%, 0%);
+              opacity: 0.8; }
   body header .navDetails {
     z-index: 2;
     height: 300px;
@@ -162,12 +194,14 @@ body header {
     border-radius: 50%;
     border: 1px solid #333;
     background: #006599;
-    text-align: center; }
+    text-align: center;
+    overflow: hidden;
+    transition: 1.5s; }
     body header .btnD i {
       animation: down linear 1.5s infinite;
       color: #fff;
       cursor: pointer;
-      font-size: 60px; }
+      font-size: 50px; }
 body .interest {
   position: fixed;
   top: 0;
