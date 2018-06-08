@@ -243,14 +243,52 @@ body .cert {
     color: #000;
     font-size: 60px; }
   body .cert .certGallery {
-    height: 580px;
-    margin: 0; }
+    position: relative;
+    height: 600px;
+    margin: 0;
+    border-top: 0px solid #006599;
+    border-bottom: 1px solid #006599;
+    background: transparent;
+    transition: 1s; }
+    body .cert .certGallery:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url("https://images.pexels.com/photos/8964/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=750&w=1260");
+      background-size: cover;
+      background-position: top;
+      opacity: 0;
+      transition: 3s; }
+    body .cert .certGallery:hover {
+      border-top: 10px solid #006599;
+      border-bottom: 10px solid #006599;
+      z-index: 2; }
+      body .cert .certGallery:hover .certText {
+        position: relative;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        color: #000;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.6); }
+        body .cert .certGallery:hover .certText h1 {
+          color: #000; }
+      body .cert .certGallery:hover:before {
+        opacity: 0.9; }
+    body .cert .certGallery .certText {
+      height: 100%;
+      transition: 1s; }
+      body .cert .certGallery .certText h1 {
+        transition: 1s; }
     body .cert .certGallery .certBox {
+      height: 100%;
       overflow: hidden;
       position: relative;
       display: flex;
       align-items: center;
-      margin-top: 20px;
       justify-content: center; }
       body .cert .certGallery .certBox img {
         height: 400px;
@@ -391,7 +429,7 @@ body .gallery {
       text-align: center;
       width: 40px;
       cursor: pointer;
-      text-shadow: 0 0 5 #000; }
+      text-shadow: 0 0 5px #000; }
     body .gallery #changeSlide h1 {
       letter-spacing: 2px;
       line-height: 70px;
