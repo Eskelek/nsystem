@@ -25,6 +25,15 @@ $(function () {
         $("#p4").css({transform: "translateX(500%)"});
     });
     
+    //100vhZMenu
+    const arrowDown = $(".arrow").click(function (e) {
+        
+        let windowHeight = window.innerHeight;
+    
+        $("body, html").animate({scrollTop: windowHeight }, 1500);
+    });
+    
+    //scrollowanie sekcji
     var mButton = $(".menuButton");
     $(mButton).click(function () {
         var id = this.id;
@@ -41,36 +50,23 @@ $(function () {
         }, 300);
     });
     
+    //pokazywanie oferty
+	$(".klik").click(function() { 
+        let id = this.id;
+        chooseSection(id);
+    });
     
-	$(".kli").click(function() { chooseSection();});
-    function chooseSection (a) {
-        console.log("a");
-        $(".inner").animate({opacity: "0"});
-        $(".offer").animate({opacity: "1"});
-        $(".offer").css({display: "block"});
-        
-        /*const cSection = $("#camSec");
-        const aSection = $("#autSec");
-        const chooseS = $(".choose");
-        const bcard = $(".automatCard");
-        const acard = $(".camCard");
+    function chooseSection (id) {
+        let actualCliked = "#" + id + ""
+        var cIn = $(actualCliked).find(".inner")
+        var cOf = $(actualCliked).find(".offer")
         
         
-        if(a == 1) {
-            $(acard).css({transform: "translateX(-100%)"});
-            $(bcard).css({transform: "translateX(100%)"});
-            $(cSection).css({animation: "opacityTo linear 2s"});
-            $(cSection).removeClass("inVisible");
-            $(cSection).addClass("visible");
-            $(chooseS).css({height: "auto"});
-        } else {
-            $(acard).css({transform: "translateX(-100%)"});
-            $(bcard).css({transform: "translateX(100%)"});
-            $(aSection).css({animation: "opacityTo linear 2s"});
-            $(aSection).removeClass("inVisible");
-            $(aSection).addClass("visible");
-            $(chooseS).css({height: "auto"});
-        }*/
+        $(actualCliked).css({color: "#fff", background: "#006599"});
+        $(cIn).animate({opacity: "0"});
+        $(cOf).animate({opacity: "1"});
+        $(cOf).css({display: "block"});
+        console.log(cOf, cIn)
     }
     
     //slider
@@ -115,6 +111,7 @@ $(function () {
     }
     var swap = $("#changeSlide");
     var image = $(".image");
+    var imageTape = $(".slideTape");
     
     $(swap).mouseover(function() {
         clearInterval(intervalId);
@@ -128,15 +125,5 @@ $(function () {
     $(image).mouseout(function() {
         intervalId = setInterval(changeRightSlide, 4000);
     });
-    
-    
-    const arrowDown = $(".arrow").click(function (e) {
-        
-        let windowHeight = window.innerHeight;
-    
-        $("body, html").animate({scrollTop: windowHeight }, 1500);
-    })
-    
-    //slider
     
 });

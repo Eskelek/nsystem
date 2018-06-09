@@ -33,15 +33,12 @@
 .visible {
   display: block; }
 
-body #particles-js {
-  overflow: hidden;
-  height: 100vh; }
 body header {
   z-index: 1;
   position: relative;
   height: 100vh;
   background: #fff;
-  overflow-x: hidden; }
+  overflow: hidden; }
   body header nav {
     padding: 0;
     background: #006599;
@@ -311,7 +308,7 @@ body .choose {
     left: 0;
     width: 50%;
     height: 100%;
-    cursor: pointer;
+    overflow: hidden;
     background: transparent; }
     body .choose .card .klik {
       background: #fff;
@@ -322,7 +319,8 @@ body .choose {
       border: 3px solid #006599;
       text-align: center;
       border-radius: 20px;
-      color: #006599; }
+      color: #006599;
+      transition: 2s; }
       body .choose .card .klik img {
         margin-top: 10%;
         height: 12%; }
@@ -365,8 +363,9 @@ body .choose {
           left: 50%;
           transform: translateX(-50%); }
           body .choose .card .klik .offer ul li {
-            font-size: 20px;
-            letter-spacing: 1px; }
+            letter-spacing: 2px;
+            font-size: 22px;
+            line-height: 30px; }
   body .choose .automatCard {
     left: 50%; }
 body .gallery {
@@ -394,12 +393,32 @@ body .gallery {
       width: 210vw;
       list-style-type: none; }
       body .gallery .slider .slideTape li {
+        position: relative;
         margin: 0;
         padding: 0;
         display: inline-block;
         width: 70vw;
         list-style: none;
         height: 60vh; }
+        body .gallery .slider .slideTape li:hover .desc {
+          opacity: 1; }
+        body .gallery .slider .slideTape li .desc {
+          background: rgba(0, 0, 0, 0.6);
+          opacity: 0;
+          position: absolute;
+          border-radius: 20px;
+          height: 30%;
+          width: 50%;
+          top: 40%;
+          left: 50%;
+          color: #fff;
+          z-index: 10;
+          transform: translateX(-50%);
+          transition: 1s;
+          text-align: center; }
+          body .gallery .slider .slideTape li .desc h1 {
+            line-height: 78px;
+            font-size: 30px; }
         body .gallery .slider .slideTape li img {
           margin: 0 2.5% 0 2.5%;
           padding: 0;
@@ -492,7 +511,7 @@ body .last {
             color: #000;
             height: 60px;
             text-decoration: none; }
-          body .last .info .share .inShare .icons .fa {
+          body .last .info .share .inShare .icons .fab {
             font-size: 30px;
             line-height: 60px;
             height: 60px;
@@ -501,17 +520,18 @@ body .last {
             cursor: pointer;
             border-radius: 50%;
             transition: 1s; }
-            body .last .info .share .inShare .icons .fa:hover {
+            body .last .info .share .inShare .icons .fab:hover {
               color: #fff;
-              transform: scale(1.2); }
+              transform: scale(1.2);
+              text-shadow: 0 0 10px #000; }
           body .last .info .share .inShare .icons .faMar {
             margin-right: 5%; }
             body .last .info .share .inShare .icons .faMar:last-of-type {
               margin-right: 0; }
           body .last .info .share .inShare .icons .fa-twitter:hover {
             background-color: #4099FF; }
-          body .last .info .share .inShare .icons .fa-facebook:hover {
-            background-color: #3B5998; }
+          body .last .info .share .inShare .icons .fa-facebook-f:hover {
+            background-color: #4099FF; }
           body .last .info .share .inShare .icons .fa-instagram:hover {
             background-color: #5C3D2E; }
   body .last .map {
