@@ -1,5 +1,6 @@
 $(function () {
     'use strict';
+    $(".preloader").css({display: "none"});
     //pokazywanie "o nas"
     $("#navBtn").click(function() { 
         $(".navDetails").css({top: "120px"});
@@ -58,15 +59,14 @@ $(function () {
     
     function chooseSection (id) {
         let actualCliked = "#" + id + ""
-        var cIn = $(actualCliked).find(".inner")
-        var cOf = $(actualCliked).find(".offer")
+        const cIn = $(actualCliked).find(".inner")
+        const cOf = $(actualCliked).find(".offer")
         
         
         $(actualCliked).css({color: "#fff", background: "#006599"});
         $(cIn).animate({opacity: "0"});
         $(cOf).animate({opacity: "1"});
         $(cOf).css({display: "block"});
-        console.log(cOf, cIn)
     }
     
     //slider
@@ -87,9 +87,11 @@ $(function () {
     })
     
     function changeRightSlide() {
-        tape.animate({marginLeft: "-100%"},1500, moveFirstSlide);
-        tape.animate({animation: "opacityTo 1s linear"})
+        tape.fadeOut(800);
+        tape.animate({marginLeft: "-100%"},500, moveFirstSlide);
+        tape.fadeIn(800);
     }
+        
     function changeLeftSlide() {
         moveLastSlide();
         tape.animate({marginLeft: 0},1500);

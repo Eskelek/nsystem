@@ -13,4 +13,11 @@
     75%  {opacity: .75}
     100% {opacity: 1}
 }
+@keyframes opacityFrom {
+    0%   {opacity: 1}
+    25%  {opacity: .75}
+    50%  {opacity: .5}
+    75%  {opacity: .25}
+    100% {opacity: 0}
+}
     

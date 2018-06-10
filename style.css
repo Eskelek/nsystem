@@ -33,6 +33,16 @@
 .visible {
   display: block; }
 
+body .preloader {
+  position: fixed;
+  top: 0;
+  left: 0; }
+  body .preloader i {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    font-size: 100px;
+    color: #006599; }
 body header {
   z-index: 1;
   position: relative;
@@ -73,19 +83,18 @@ body header {
             transition: 1s;
             opacity: 0; }
           body header nav ul li .anim:before {
-            top: -12%;
-            left: 0%;
+            top: -7%;
+            left: 5%;
             transform: translate(200%, 50%);
-            border-top: 3px solid #fff;
-            border-left: 3px solid #fff; }
+            border-top: 5px solid #fff;
+            border-left: 5px solid #fff; }
           body header nav ul li .anim:after {
-            right: 0%;
-            bottom: -12%;
+            right: 5%;
+            bottom: -7%;
             transform: translate(-200%, -50%);
-            border-bottom: 3px solid #fff;
-            border-right: 3px solid #fff; }
+            border-bottom: 5px solid #fff;
+            border-right: 5px solid #fff; }
           body header nav ul li .anim:hover {
-            transform: scale(1.1);
             text-shadow: 0 0 10px #333; }
             body header nav ul li .anim:hover:before, body header nav ul li .anim:hover:after {
               transform: translate(0%, 0%);
@@ -359,13 +368,22 @@ body .choose {
         body .choose .card .klik .offer ul {
           text-align: left;
           position: absolute;
-          top: 50%;
+          top: 45%;
           left: 50%;
           transform: translateX(-50%); }
           body .choose .card .klik .offer ul li {
+            padding: 10px 0;
             letter-spacing: 2px;
             font-size: 22px;
             line-height: 30px; }
+        body .choose .card .klik .offer p {
+          letter-spacing: 1px;
+          line-height: 24px;
+          position: absolute;
+          top: 75%;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 18px; }
   body .choose .automatCard {
     left: 50%; }
 body .gallery {
@@ -457,6 +475,8 @@ body .gallery {
 body .last {
   position: relative;
   background: #333;
+  background-position: center;
+  background-size: 100%;
   height: 600px; }
   body .last .info {
     height: 550px; }
@@ -542,15 +562,17 @@ body .last {
       margin: 30px auto;
       height: 500px; }
   body .last .made {
+    line-height: 35px;
+    text-align: left;
     position: absolute;
     bottom: 0;
     left: 0;
     background: #000;
     height: 40px; }
     body .last .made a {
-      position: absolute;
-      top: 30%;
-      left: 80%;
-      color: #fff; }
+      color: #fff;
+      text-decoration: none; }
+      body .last .made a:last-of-type {
+        text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
