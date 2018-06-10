@@ -1,6 +1,6 @@
 $(function () {
     'use strict';
-    $(".preloader").css({display: "none"});
+    $(".preloader").addClass("complete")
     //pokazywanie "o nas"
     $("#navBtn").click(function() { 
         $(".navDetails").css({top: "120px"});
