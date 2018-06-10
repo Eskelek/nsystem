@@ -483,6 +483,8 @@ body .gallery {
       line-height: 70px;
       font-size: 50px;
       text-shadow: 0 0 5 #000; }
+    body .gallery #changeSlide p {
+      font-size: 16px; }
 body .last {
   position: relative;
   background: #333;
