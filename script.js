@@ -87,9 +87,7 @@ $(function () {
     })
     
     function changeRightSlide() {
-        tape.fadeOut(800);
-        tape.animate({marginLeft: "-100%"},500, moveFirstSlide);
-        tape.fadeIn(800);
+        tape.animate({marginLeft: "-100%"},1500, moveFirstSlide);
     }
         
     function changeLeftSlide() {

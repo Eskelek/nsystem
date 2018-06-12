@@ -44,7 +44,7 @@ body .preloader {
   left: 0;
   height: 100%;
   width: 100%;
-  background: #000;
+  background: transparent;
   transition: 1s; }
   body .preloader i {
     position: absolute;
@@ -56,6 +56,7 @@ body header {
   z-index: 1;
   position: relative;
   height: 100vh;
+  min-height: 700px;
   background: #fff;
   overflow: hidden; }
   body header nav {
@@ -234,10 +235,7 @@ body .interestTwo {
   top: 50%;
   left: 0;
   z-index: -5;
-  height: 50%;
-  background: url("https://images.pexels.com/photos/1106433/pexels-photo-1106433.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
-  background-position: 0% 20%;
-  background-size: 100%; }
+  height: 50%; }
 body .null {
   height: 350px;
   position: relative;
@@ -321,19 +319,18 @@ body .choose {
   overflow: hidden;
   background: #fff;
   height: 100vh;
+  min-height: 700px;
   position: relative; }
   body .choose .card {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
     height: 100%;
     overflow: hidden;
     background: transparent; }
     body .choose .card .klik {
       background: #fff;
       height: 84%;
-      width: 60%;
       margin: 8% 0 0 50%;
       transform: translateX(-50%);
       border: 3px solid #006599;
@@ -346,7 +343,7 @@ body .choose {
         height: 12%; }
       body .choose .card .klik h1 {
         position: absolute;
-        top: 35%;
+        top: 25%;
         left: 50%;
         font-weight: lighter;
         transform: translateX(-50%);
@@ -379,7 +376,7 @@ body .choose {
         body .choose .card .klik .offer ul {
           text-align: left;
           position: absolute;
-          top: 45%;
+          top: 40%;
           left: 50%;
           transform: translateX(-50%); }
           body .choose .card .klik .offer ul li {
@@ -400,35 +397,37 @@ body .choose {
 body .gallery {
   position: relative;
   height: 80vh;
+  min-height: 700px;
   background: #333;
   background-size: 100%; }
   body .gallery .slider {
+    position: relative;
     background: transparent;
-    position: absolute;
-    top: 0%;
-    left: 0%;
     font-size: 0;
     padding: 0;
     height: inherit;
-    width: 70%;
+    min-height: 500px;
     overflow: hidden; }
     body .gallery .slider .slideTape {
       height: 60vh;
+      min-height: 450px;
       position: relative;
       top: 50%;
       transform: translateY(-50%);
       margin: 0;
       padding: 0;
-      width: 210vw;
+      width: 198vw;
       list-style-type: none; }
       body .gallery .slider .slideTape li {
         position: relative;
         margin: 0;
         padding: 0;
         display: inline-block;
-        width: 70vw;
+        width: 66vw;
+        transition: 2s;
         list-style: none;
-        height: 60vh; }
+        height: 60vh;
+        min-height: 450px; }
         body .gallery .slider .slideTape li:hover .desc {
           opacity: 1; }
         body .gallery .slider .slideTape li .desc {
@@ -449,42 +448,45 @@ body .gallery {
             line-height: 78px;
             font-size: 30px; }
         body .gallery .slider .slideTape li img {
-          margin: 0 2.5% 0 2.5%;
+          margin: 0;
           padding: 0;
           border-radius: 15px;
           height: 100%;
-          width: 95%; }
+          width: 95%;
+          margin-left: 2.5%; }
   body .gallery #changeSlide {
-    padding-top: 3%;
-    position: absolute;
-    background: #fff;
-    top: 12.4%;
-    left: 85%;
-    width: 25%;
-    height: 60vh;
-    transform: translateX(-50%);
-    font-size: 30px;
-    color: #006599;
-    border-radius: 20px;
-    border: 2px solid #006599;
-    text-align: center; }
-    body .gallery #changeSlide img {
-      margin-top: 20px;
-      height: 80px; }
-    body .gallery #changeSlide i {
-      margin-top: 10%;
-      font-size: 50px;
+    height: inherit;
+    min-height: 500px;
+    position: relative; }
+    body .gallery #changeSlide .changeBox {
+      margin-left: 8.3%;
+      background: #fff;
+      height: 60vh;
+      min-height: 450px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 20px;
+      border: 3px solid #006599;
       text-align: center;
-      width: 40px;
-      cursor: pointer;
-      text-shadow: 0 0 5px #000; }
-    body .gallery #changeSlide h1 {
-      letter-spacing: 2px;
-      line-height: 70px;
-      font-size: 50px;
-      text-shadow: 0 0 5 #000; }
-    body .gallery #changeSlide p {
-      font-size: 16px; }
+      color: #006599; }
+      body .gallery #changeSlide .changeBox img {
+        margin-top: 20px;
+        height: 80px; }
+      body .gallery #changeSlide .changeBox i {
+        margin-top: 10%;
+        font-size: 50px;
+        text-align: center;
+        width: 40px;
+        cursor: pointer;
+        text-shadow: 0 0 5px #000; }
+      body .gallery #changeSlide .changeBox h1 {
+        letter-spacing: 2px;
+        line-height: 70px;
+        font-size: 50px;
+        text-shadow: 0 0 5 #000; }
+      body .gallery #changeSlide .changeBox p {
+        font-size: 16px; }
 body .last {
   position: relative;
   background: #333;
@@ -494,21 +496,22 @@ body .last {
   body .last .info {
     height: 550px; }
     body .last .info .localize {
-      margin: 5%;
-      height: 40%;
-      background: #fff;
-      border-radius: 20px;
-      border: 2px solid #006599; }
+      margin: 5% 0;
+      height: 50%; }
       body .last .info .localize .contact {
+        background: #fff;
+        border-radius: 20px;
+        border: 2px solid #006599;
         margin-left: 5%;
         padding-top: 20px;
-        height: 300px;
+        height: 250px;
         text-align: center;
         color: #006599;
         text-shadow: 0 0 1px #000; }
         body .last .info .localize .contact h1 {
           font-size: 30px;
-          line-height: 40px; }
+          line-height: 40px;
+          padding-bottom: 5%; }
         body .last .info .localize .contact p {
           font-size: 22px;
           line-height: 30px; }
@@ -587,5 +590,80 @@ body .last {
       text-decoration: none; }
       body .last .made a:last-of-type {
         text-align: center; }
+
+@media(orientation: landscape) and (max-width: 1250px) {
+  body header nav ul li p {
+    font-size: 28px; }
+  body header nav ul #head img {
+    width: 90%; }
+  body header .aboutUs h1 {
+    font-size: 30px; }
+  body header .aboutUs p {
+    font-size: 18px;
+    line-height: 22px; }
+  body .cert .certGallery .certText {
+    height: 100px; }
+    body .cert .certGallery .certText h1 {
+      margin: 0;
+      font-size: 28px; }
+  body .cert .certGallery .certBox {
+    height: 480px; }
+  body .choose {
+    min-height: 450px; }
+    body .choose .card .klik .offer h1 {
+      font-size: 28px;
+      line-height: 32px; }
+    body .choose .card .klik .offer ul {
+      top: 35%; }
+      body .choose .card .klik .offer ul li {
+        font-size: 18px;
+        line-height: 24px;
+        padding: 5px 0; }
+  body .gallery {
+    min-height: 450px; }
+    body .gallery .slider {
+      min-height: 450px; }
+      body .gallery .slider .slideTape {
+        min-height: 400px; }
+        body .gallery .slider .slideTape .slide {
+          min-height: 400px; }
+    body .gallery #changeSlide {
+      min-height: 450px; }
+      body .gallery #changeSlide .changeBox {
+        min-height: 400px; }
+        body .gallery #changeSlide .changeBox img {
+          height: 60px; }
+        body .gallery #changeSlide .changeBox h1 {
+          font-size: 28px;
+          line-height: 36px; }
+        body .gallery #changeSlide .changeBox i {
+          margin-top: 15%; }
+  body .last {
+    height: 450px; }
+    body .last .map iframe {
+      height: 380px;
+      margin: 10px auto; }
+    body .last .info {
+      height: 400px; }
+      body .last .info .localize {
+        height: 200px; }
+        body .last .info .localize .contact {
+          padding-top: 7px;
+          height: 180px; }
+          body .last .info .localize .contact h1 {
+            font-size: 28px;
+            line-height: 34px; }
+          body .last .info .localize .contact p {
+            font-size: 18px;
+            line-height: 24px; }
+      body .last .info .share {
+        height: 200px; }
+        body .last .info .share .inShare {
+          height: 160px; }
+          body .last .info .share .inShare h2 {
+            padding: 10px;
+            letter-spacing: 1px;
+            font-size: 22px;
+            line-height: 26px; } }
 
 /*# sourceMappingURL=style.css.map */
