@@ -592,6 +592,10 @@ body .last {
         text-align: center; }
 
 @media(orientation: landscape) and (max-width: 1250px) {
+  body .interest {
+    height: 250px; }
+  body .null {
+    height: 250px; }
   body header nav ul li p {
     font-size: 28px; }
   body header nav ul #head img {
@@ -665,5 +669,18 @@ body .last {
             letter-spacing: 1px;
             font-size: 22px;
             line-height: 26px; } }
+@media(orientation: landscape) and (max-width: 900px) {
+  body .gallery {
+    min-height: 400px; }
+    body .gallery .slider {
+      min-height: 400px; }
+      body .gallery .slider .slideTape {
+        min-height: 350px; }
+        body .gallery .slider .slideTape .slide {
+          min-height: 350px; }
+    body .gallery #changeSlide {
+      min-height: 400px; }
+      body .gallery #changeSlide .changeBox {
+        min-height: 350px; } }
 
 /*# sourceMappingURL=style.css.map */
