@@ -74,6 +74,8 @@ body header {
         height: 80px;
         font-size: 35px;
         text-align: center; }
+        body header nav ul li .fas {
+          display: none; }
         body header nav ul li img {
           width: 50%;
           margin-top: 15px; }
@@ -277,22 +279,6 @@ body .cert {
       background-position: top;
       opacity: 0;
       transition: 3s; }
-    body .cert .certGallery:hover {
-      border-top: 10px solid #006599;
-      border-bottom: 10px solid #006599;
-      z-index: 2; }
-      body .cert .certGallery:hover .certText {
-        position: relative;
-        top: 0;
-        left: 0;
-        opacity: 1;
-        color: #000;
-        z-index: 2;
-        background: rgba(255, 255, 255, 0.6); }
-        body .cert .certGallery:hover .certText h1 {
-          color: #000; }
-      body .cert .certGallery:hover:before {
-        opacity: 0.9; }
     body .cert .certGallery .certText {
       height: 100%;
       transition: 1s; }
@@ -591,6 +577,23 @@ body .last {
       body .last .made a:last-of-type {
         text-align: center; }
 
+@media(orientation: landscape) and (min-width: 1000px) {
+  body .cert .certGallery:hover {
+    border-top: 10px solid #006599;
+    border-bottom: 10px solid #006599;
+    z-index: 2; }
+    body .cert .certGallery:hover .certText {
+      position: relative;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      color: #000;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.6); }
+      body .cert .certGallery:hover .certText h1 {
+        color: #000; }
+    body .cert .certGallery:hover:before {
+      opacity: 0.9; } }
 @media(orientation: landscape) and (max-width: 1250px) {
   body .interest {
     height: 250px; }
@@ -682,5 +685,124 @@ body .last {
       min-height: 400px; }
       body .gallery #changeSlide .changeBox {
         min-height: 350px; } }
+@media(orientation: landscape) and (max-width: 750px) {
+  body .interest {
+    height: 140px; }
+  body header {
+    min-height: 350px; }
+    body header nav {
+      z-index: 10;
+      height: 60px;
+      position: absolute;
+      top: 0;
+      left: 0; }
+      body header nav ul {
+        height: 50px; }
+        body header nav ul li {
+          height: 50px;
+          font-size: 24px;
+          line-height: 50px; }
+          body header nav ul li .anim {
+            border-top: 1px solid #fff;
+            height: 48px;
+            margin-top: 1px; }
+        body header nav ul .menuButton {
+          height: 0px;
+          opacity: 0; }
+        body header nav ul #head img {
+          width: 50%;
+          margin-top: 10px; }
+        body header nav ul #head .fas {
+          cursor: pointer;
+          display: block;
+          color: #fff;
+          font-size: 40px;
+          position: absolute;
+          top: 10px;
+          left: 80%; }
+    body header .navDetails {
+      top: 60px;
+      height: 200px; }
+      body header .navDetails img {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 70%; }
+      body header .navDetails h2 {
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 2px; }
+      body header .navDetails h4 {
+        font-size: 15px;
+        line-height: 20px; }
+      body header .navDetails button {
+        height: 40px;
+        font-size: 18px;
+        margin-top: 15px; }
+    body header .aboutUs {
+      top: 90px;
+      height: 250px; }
+      body header .aboutUs h1 {
+        font-size: 20px;
+        line-height: 22px;
+        padding: 5px; }
+      body header .aboutUs p {
+        letter-spacing: 0;
+        font-size: 15px;
+        line-height: 18px;
+        padding: 2px; }
+      body header .aboutUs button {
+        left: 70%;
+        height: 35px;
+        font-size: 16px; }
+    body header .btnD {
+      height: 48px;
+      width: 48px;
+      top: 85%; }
+      body header .btnD i {
+        font-size: 40px; }
+  body .cert {
+    height: 330px; }
+    body .cert .certGallery {
+      height: 330px; }
+      body .cert .certGallery .certText {
+        height: 80px; }
+        body .cert .certGallery .certText h1 {
+          font-size: 18px; }
+        body .cert .certGallery .certText p {
+          font-size: 12px; }
+      body .cert .certGallery .certBox {
+        height: 220px; }
+        body .cert .certGallery .certBox .certImg {
+          height: 220px; }
+  body .choose {
+    min-height: 600px;
+    padding-top: 10px; }
+    body .choose .card {
+      margin-left: 4.3%;
+      height: 300px;
+      position: relative; }
+      body .choose .card .klik {
+        height: 90%;
+        margin: 0;
+        transform: translateX(0); }
+        body .choose .card .klik img {
+          margin-top: 1%; }
+        body .choose .card .klik .inner h1 {
+          top: 15%;
+          font-size: 30px;
+          line-height: 36px; }
+        body .choose .card .klik .inner button {
+          font-size: 24px; }
+        body .choose .card .klik .offer h1 {
+          top: 15%;
+          font-size: 30px;
+          line-height: 36px; }
+        body .choose .card .klik .offer ul li {
+          letter-spacing: 1px;
+          font-size: 16px;
+          line-height: 18px;
+          padding: 2px 0; }
+    body .choose .automatCard {
+      left: 0; } }
 
 /*# sourceMappingURL=style.css.map */

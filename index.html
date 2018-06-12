@@ -19,10 +19,13 @@
     <header id="particles-js">
         <nav id="head" class="col-12">
             <ul class="col-12 row">
-                <li class="col-3 col-m-3 col-s-12" id="head"><img src="images/N-Systemlogo.JPG"></li>
-                <li class="col-3 col-m-3 col-s-12 menuButton" id="choose"><p class="anim col-5 col-m-8">Usługi</p></li>
-                <li class="col-3 col-m-3 col-s-12 menuButton" id="cert"><p class="anim col-7 col-m-10">Certyfikaty</p></li>
-                <li class="col-3 col-m-3 col-s-12 menuButton" id="footer"><p class="anim col-5 col-m-8">Kontakt</p></li>
+                <li class="col-3 col-m-3 col-s-6" id="head">
+                    <img src="images/N-Systemlogo.JPG">
+                    <i class="fas fa-bars"></i>
+                </li>
+                <li class="col-3 col-m-3 col-s-12 menuButton" id="choose"><p class="anim col-5 col-m-8 col-s-8">Usługi</p></li>
+                <li class="col-3 col-m-3 col-s-12 menuButton" id="cert"><p class="anim col-7 col-m-10 col-s-8">Certyfikaty</p></li>
+                <li class="col-3 col-m-3 col-s-12 menuButton" id="footer"><p class="anim col-5 col-m-8 col-s-8">Kontakt</p></li>
             </ul>
         </nav>
         <div class="navDetails col-6">
@@ -47,14 +50,14 @@
     </div>
     <section class="cert col-12">
         <div class="certGallery row">
-            <div class="col-3 col-m-12 certText">
+            <div class="col-3 col-m-12 col-s-12 certText">
                 <h1>Nasze<br>Certyfikaty</h1>
                 <p>coś tutaj dodac?</p>
             </div>
-            <div class="certBox col-4 col-m-7">
+            <div class="certBox col-4 col-m-7 col-s-8">
                 <img class="certImg" id="benica" src="images/benincaCert.jpg">
             </div>
-            <div class="certBox col-5 col-m-5">
+            <div class="certBox col-5 col-m-5 col-s-4">
                 <img class="certImg" id="faac" src="images/faacCert.jpg">
             </div>
         </div>
@@ -63,7 +66,7 @@
     </section>
     <section class="choose col-12 row">
         <div class="camCard col-6 col-s-12 card">
-            <div class="klik col-7 col-m-10" id="camKlik">
+            <div class="klik col-7 col-m-10 col-s-11" id="camKlik">
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARASURBVGhD7ZlZyFVVFMdPWZlBGYISBc3SID6kEoIGIRVFEAXVg0VBgxPkg0SKlr4IaQ8lQdNDvUQzNFGUSgNU9KBWJmpCKlFRaEVzNPf77XNX7e/zu/c71/Sec+H7w4+71xnu3eucvddee91iRCPqnUbBw/Ax7GyxFa6CvtIs+Bteh6dbfAKfQl/pUtCRmckq9Rh8Wzabq2NgNayF9fA+6MiGli1fwO+Z3RSegPMg6Rn4C7bAxj5jD/wKp0PxMzxuow81GRw98zRs3G+jD2Uktf8Xa9TpyBEwumzulx4FR9QYjTocOQlegj/gTzDUnwndyPXua3ghWajXjkyAL+FNuBwM9zr1A5wCVeXyYN9vShbqtSP+liH+8GSVOgR0zAhaVS4ZRtvjk4WqOuKr3ATfdOAzOAMcs6Y1cfwruBbUe3BH2RwgI4/rVVVtB9e6f9XNG7kdHurAGhgHPuGVrWPyIJwD6m24p2wO0DLYUTaH1Wlgvwc8kF4PrQXwPZyVrFIngvNmRbKG10Kw31OS1VKvHTkUnoOf4Ckwj/sO3gDDcRUZ5ez3I5BCr+q1I8qhNxt0xAl+M+hgFY2F38D5aN+vg6Q6HPk/itV8fvaZ1G+OxGpudNzHkXfAE6c2nHPBfdGzYIDYx5F+wrcxHYZ0ZB0sgsUN4xcwCwjbTvtm1JCONHWOOIwMz0OpoyPG5F1wRbKKYjx8DjOSVS5iphGxmHnc816nvM/7I7bPhc1lM8nMwC116D7IO2o4vqtsJu23I3FySbL+24EZ81UUJvxUHtf2OuV92n6P8nu1Q3bKikzoLfiwbCbZNhMO6Ug+tHLuBL97DiRphCNHw49wfbKK4gSw6HBhsopiKmj7qTyu7XXK+7zf71FLIU8E7wYTz5Bv4NWymfQauFqHdMT+tcO05mRI8kA+R45qfYYOpO3qfWTZTDoM8rTE3aJZdkhHnofBYTjItwLFbvgIHCaumk3hVvAhL4dKcpdmApe/sqZgicptQWV58flwQQV8e6bhl2TH2uFexA45V4Y634lp4NA7aLoG7JwbJyd9O9xTG6F0PB/3jZGdslyZD4F2uDL7dBsrX/lFsA3cG9wCxnN5FwzJN4Bln56r6sYm5JO2ivFAskoZPvfCy8mqQZeB1Q4r81VkIcEOG7rdsYVuBIfU1cmqQeYrdiBSi3Zyi+rW0qhlJfxsCB0LrrQfQLdv94BpOEesAJoAml54nYmgJZmQDlrRd6j5j1dtCkdMCaKoFlif9ZwYTt23DK52WJPyvNW/WhWOmJ1GUS24F24D14XBQ8Y3sQq81wle+3pRdY7kcri9At73JFStSR1UdePIRLDk6d7ZBc/0o7bJPVjhiBlwnu+IodnFzc5bgPb/DHkRrLw0SuFIJ5z0/gHpnEh/PjZR4Yif+Z7gSjArngT5wtdYdTNHGi2LyDpyXLL6WKYXTuoR1aui+Achge6lIbLzXwAAAABJRU5ErkJggg==">
                 <div class="inner col-12">
                     <h1>Systemy<br>Zabezpieczeń</h1>
@@ -80,7 +83,7 @@
             </div>
         </div>
         <div class="automatCard col-6 col-s-12 card">
-            <div class="klik col-7 col-m-10" id="autoKlik">
+            <div class="klik col-7 col-m-10 col-s-11" id="autoKlik">
                 <img src="data:image/png;base64,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">
                 <div class="inner col-12">
                     <h1>Automatyka</h1>

@@ -1,9 +1,24 @@
 $(function () {
     'use strict';
     $(".preloader").addClass("complete")
+    
+    //pokazywanie menu na mobile
+    $(".fa-bars").click(function(){
+        let mB = $(".menuButton");
+        if(mB.hasClass("active")) {
+            $(mB).animate({height: "0px", opacity: "0"}, 2000).removeClass("active");
+        } else {
+            $(mB).animate({height: "48px", opacity: "1"}, 2000).addClass("active");
+        }
+    })
     //pokazywanie "o nas"
     $("#navBtn").click(function() { 
-        $(".navDetails").css({top: "120px"});
+        let winWidth = $(window).width();
+        if(winWidth < 750) {
+            $(".navDetails").css({top: " 60px"});
+        } else {
+            $(".navDetails").css({top: "120px"});
+        }
         $(this).css({opacity: "0"});
         $(".aboutUs").animate({opacity: "1"}, 1500);
         $(".fade").css({opacity: "0"});
