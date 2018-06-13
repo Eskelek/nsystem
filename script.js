@@ -8,7 +8,7 @@ $(function () {
         if(mB.hasClass("active")) {
             $(mB).animate({height: "0px", opacity: "0"}, 2000).removeClass("active");
         } else {
-            $(mB).animate({height: "48px", opacity: "1"}, 2000).addClass("active");
+            $(mB).animate({height: "40px", opacity: "1"}, 2000).addClass("active");
         }
     })
     //pokazywanie "o nas"
@@ -45,6 +45,7 @@ $(function () {
     const arrowDown = $(".arrow").click(function (e) {
         
         let windowHeight = window.innerHeight;
+        let headHeight = $("#particle-js").height()
     
         $("body, html").animate({scrollTop: windowHeight }, 1500);
     });
