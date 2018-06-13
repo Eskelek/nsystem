@@ -917,5 +917,118 @@ body .last {
   body .gallery #changeSlide .changeBox h1 {
     letter-spacing: 0;
     font-size: 18px; } }
+@media(orientation: portrait) and (max-width: 1000px) {
+  body .null {
+    height: 260px; }
+  body header nav ul li {
+    font-size: 28px; }
+  body header nav ul #head img {
+    width: 80%;
+    margin-top: 22px; }
+  body header .aboutUs {
+    top: 25%; }
+  body .cert {
+    height: 520px; }
+    body .cert .certGallery {
+      height: 520px; }
+      body .cert .certGallery .certText {
+        height: 100px; }
+        body .cert .certGallery .certText h1 {
+          margin-top: 10px;
+          font-size: 30px; }
+      body .cert .certGallery .certBox {
+        height: 400px; }
+        body .cert .certGallery .certBox img {
+          height: 350px; }
+  body .choose {
+    height: 450px; }
+    body .choose .card .klik img {
+      height: 10%; }
+    body .choose .card .klik .inner h1 {
+      top: 150px; }
+    body .choose .card .klik .inner button {
+      top: 70%; }
+    body .choose .card .klik .offer h1 {
+      top: 150px;
+      font-size: 30px;
+      line-height: 36px; }
+    body .choose .card .klik .offer ul {
+      margin-left: 5%;
+      top: 220px; }
+      body .choose .card .klik .offer ul li {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 1px; }
+  body .gallery {
+    min-height: 40px;
+    height: 430px; }
+    body .gallery .slider {
+      height: 430px;
+      min-height: 40px; }
+      body .gallery .slider .slideTape {
+        min-height: 35px;
+        height: 380px; }
+        body .gallery .slider .slideTape .slide {
+          height: 380px;
+          min-height: 35px; }
+    body .gallery #changeSlide {
+      height: 430px;
+      min-height: 40px; }
+      body .gallery #changeSlide .changeBox {
+        height: 380px;
+        min-height: 35px; }
+        body .gallery #changeSlide .changeBox img {
+          margin-top: 8px;
+          height: 60px; }
+        body .gallery #changeSlide .changeBox h1 {
+          font-size: 30px;
+          line-height: 45px; }
+  body .last {
+    height: 450px; }
+    body .last .map {
+      height: 440px; }
+      body .last .map iframe {
+        margin: 10px auto;
+        height: 360px; }
+    body .last .info {
+      height: 440px; }
+      body .last .info .localize {
+        margin: 2% 0;
+        height: 200px; }
+        body .last .info .localize .contact {
+          height: 190px;
+          padding-top: 10px; }
+          body .last .info .localize .contact h1 {
+            padding-bottom: 8px;
+            font-size: 24px;
+            line-height: 28px; }
+          body .last .info .localize .contact p {
+            font-size: 20px;
+            line-height: 22px; }
+      body .last .info .share {
+        height: 180px; }
+        body .last .info .share .inShare h2 {
+          font-size: 22px;
+          letter-spacing: 1px; }
+        body .last .info .share .inShare .icons {
+          margin: 0;
+          line-height: 80px;
+          height: 80px; }
+          body .last .info .share .inShare .icons a {
+            height: 50px; }
+          body .last .info .share .inShare .icons .fab {
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            font-size: 26px; } }
+@media(orientation: portrait) and (max-width: 750px) {
+  body header nav ul #head .fas {
+    cursor: pointer;
+    display: block;
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    left: 80%; } }
 
 /*# sourceMappingURL=style.css.map */
