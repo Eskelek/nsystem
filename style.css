@@ -512,7 +512,7 @@ body .last {
             font-size: 25px;
             line-height: 30px; }
     body .last .info .share {
-      height: 50%;
+      height: 40%;
       text-align: center; }
       body .last .info .share .inShare {
         margin-left: 5%;
@@ -686,6 +686,8 @@ body .last {
       body .gallery #changeSlide .changeBox {
         min-height: 350px; } }
 @media(orientation: landscape) and (max-width: 750px) {
+  body .null {
+    height: 140px; }
   body .interest {
     height: 140px; }
   body header {
@@ -803,6 +805,29 @@ body .last {
           line-height: 18px;
           padding: 2px 0; }
     body .choose .automatCard {
-      left: 0; } }
+      left: 0; }
+  body .gallery {
+    min-height: 260px; }
+    body .gallery .slider {
+      min-height: 260px; }
+      body .gallery .slider .slideTape {
+        min-height: 200px; }
+        body .gallery .slider .slideTape .slide {
+          min-height: 200px; }
+          body .gallery .slider .slideTape .slide .desc h1 {
+            font-size: 14px;
+            line-height: 60px; }
+    body .gallery #changeSlide {
+      min-height: 260px; }
+      body .gallery #changeSlide .changeBox {
+        min-height: 200px; }
+        body .gallery #changeSlide .changeBox img {
+          height: 40px;
+          margin-top: 8px; }
+        body .gallery #changeSlide .changeBox h1 {
+          font-size: 22px;
+          line-height: 26px; }
+        body .gallery #changeSlide .changeBox i {
+          margin-top: 10%; } }
 
 /*# sourceMappingURL=style.css.map */
