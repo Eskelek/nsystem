@@ -51,7 +51,7 @@ $(function () {
     });
     
     //scrollowanie sekcji
-    var mButton = $(".menuButton");
+    /*var mButton = $(".menuButton");
     $(mButton).click(function () {
         var id = this.id;
         var clickedSection = "." + id + "";
@@ -65,19 +65,26 @@ $(function () {
         $("body, html").animate({
             opacity: 1
         }, 300);
-    });
+    });*/
     
     //pokazywanie oferty
-	$(".klik").click(function() { 
+	$(".kli").click(function() { 
         let id = this.id;
         chooseSection(id);
     });
     
     function chooseSection (id) {
-        let actualCliked = "#" + id + ""
-        const cIn = $(actualCliked).find(".inner")
-        const cOf = $(actualCliked).find(".offer")
         
+        let actualCliked
+        
+        if(id == "kliCam") {
+            actualCliked = $("#camKlik");
+        } else {
+            actualCliked = $("#autoKlik")
+        }
+    
+        const cIn = $(actualCliked).find(".inner");
+        const cOf = $(actualCliked).find(".offer");
         
         $(actualCliked).css({color: "#fff", background: "#006599"});
         $(cIn).animate({opacity: "0"});
@@ -85,6 +92,26 @@ $(function () {
         $(cOf).css({display: "block"});
     }
     
+    $(".fa-undo").click(function() { 
+        let id = this.id;
+        let section
+        
+        if(id == "one") {
+            section = $("#camKlik");
+        } else {
+            section = $("#autoKlik")
+        }
+        
+        const cIn = $(section).find(".inner");
+        const cOf = $(section).find(".offer");
+       
+        $(section).css({color: "#006599", background: "#fff"});
+        $(cIn).animate({opacity: "1"});
+        $(cOf).animate({opacity: "0"});
+        $(cOf).css({display: "none"});
+        $(cIn).css({display: "block"});
+        
+    });
     //slider
     var slide = $(".slide"),
         tape = $(".slideTape"),

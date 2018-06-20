@@ -1,0 +1,47 @@
+@-webkit-keyframes down {
+    0%   {-webkit-transform: translateY(-100%);transform: translateY(-100%)}
+    25%  {-webkit-transform: translateY(-50%);transform: translateY(-50%)}
+    50%  {-webkit-transform: translateY(0);transform: translateY(0)}
+    75%  {-webkit-transform: translateY(50%);transform: translateY(50%)}
+    100% {-webkit-transform: translateY(110%);transform: translateY(110%)}
+}
+
+@keyframes down {
+    0%   {-webkit-transform: translateY(-100%);transform: translateY(-100%)}
+    25%  {-webkit-transform: translateY(-50%);transform: translateY(-50%)}
+    50%  {-webkit-transform: translateY(0);transform: translateY(0)}
+    75%  {-webkit-transform: translateY(50%);transform: translateY(50%)}
+    100% {-webkit-transform: translateY(110%);transform: translateY(110%)}
+}
+
+@-webkit-keyframes opacityTo {
+    0%   {opacity: 0}
+    25%  {opacity: .25}
+    50%  {opacity: .5}
+    75%  {opacity: .75}
+    100% {opacity: 1}
+}
+
+@keyframes opacityTo {
+    0%   {opacity: 0}
+    25%  {opacity: .25}
+    50%  {opacity: .5}
+    75%  {opacity: .75}
+    100% {opacity: 1}
+}
+@-webkit-keyframes opacityFrom {
+    0%   {opacity: 1}
+    25%  {opacity: .75}
+    50%  {opacity: .5}
+    75%  {opacity: .25}
+    100% {opacity: 0}
+}
+@keyframes opacityFrom {
+    0%   {opacity: 1}
+    25%  {opacity: .75}
+    50%  {opacity: .5}
+    75%  {opacity: .25}
+    100% {opacity: 0}
+}
+    
+    
