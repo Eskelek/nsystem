@@ -289,33 +289,6 @@ body header {
       color: #fff;
       cursor: pointer;
       font-size: 50px; }
-body .interest {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -3;
-  height: 400px;
-  background: url("images/bramaAuto.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: 0 60%; }
-body .interestTwo {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  z-index: -5;
-  height: 50%; }
-body .null {
-  height: 350px;
-  position: relative;
-  background: url("images/kamCzerwonaCegla.jpg");
-  background-position: 50% 30%;
-  background-size: cover;
-  background-repeat: none;
-  z-index: -4; }
-body #null2 {
-  background: #333;
-  z-index: -10; }
 body .cert {
   padding: 0;
   position: relative;
@@ -382,7 +355,8 @@ body .choose {
       background-size: 100%;
       background-position: center; }
     body .choose .card #autoKlik:before {
-      background: url("images/aut.jpg"); }
+      background: url("images/aut.jpg");
+      background-position: left bottom; }
     body .choose .card .klik {
       background: #fff;
       position: relative;
@@ -459,6 +433,13 @@ body .choose {
         display: none;
         height: 80%;
         opacity: 0; }
+        body .choose .card .klik .offer .fas {
+          font-size: 40px;
+          color: #fff;
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          cursor: pointer; }
         body .choose .card .klik .offer ul {
           text-align: left;
           position: absolute;

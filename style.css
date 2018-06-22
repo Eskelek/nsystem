@@ -266,7 +266,7 @@ body .choose {
   padding: 0;
   overflow: hidden;
   background: #fff;
-  height: 90vh;
+  height: calc(100vh - 80px);
   min-height: 700px;
   position: relative; }
   body .choose .card {
@@ -397,14 +397,14 @@ body .gallery {
       transform: translateY(-50%);
       margin: 0;
       padding: 0;
-      width: 198vw;
+      width: 199.8vw;
       list-style-type: none; }
       body .gallery .slider .slideTape li {
         position: relative;
         margin: 0;
         padding: 0;
         display: inline-block;
-        width: 66vw;
+        width: 66.6vw;
         transition: 2s;
         list-style: none;
         height: 60vh;
@@ -428,14 +428,19 @@ body .gallery {
           body .gallery .slider .slideTape li .desc h1 {
             line-height: 78px;
             font-size: 30px; }
-        body .gallery .slider .slideTape li img {
+        body .gallery .slider .slideTape li .image {
+          position: absolute;
+          left: 50%;
+          top: 0;
+          transform: translateX(-50%) rotateY(0deg);
+          perspective: 1500px;
           margin: 0;
           padding: 0;
           border-radius: 15px;
           height: 100%;
-          width: 95%;
-          margin-left: 2.5%;
-          box-shadow: 0 0 40px #006599; }
+          width: 90%;
+          box-shadow: 0 0 20px #000;
+          transition: 0.2s; }
   body .gallery #changeSlide {
     height: 100%;
     min-height: 500px;

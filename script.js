@@ -169,4 +169,33 @@ $(function () {
         intervalId = setInterval(changeRightSlide, 4000);
     });
     
+    $(image).mousemove(function(e){
+        
+        let posX = e.layerX;
+        let posY = e.layerY;
+        
+        let pX = posX / 20;
+        let pY = posY / 20 - 2 * (posY / 15);
+        
+        let pXS = posX / 40;
+        let pYS = posY / 40;
+        
+        let v
+        
+        if(posY > 0) {
+            v = -pY
+        } else {
+            v = -pY
+        }
+
+        $(image).css({transform: "translateX(-50%) rotateY(" + pX + "deg) rotateX(" + pY +"deg) scale(1.03)"});
+        
+        $(image).css({boxShadow: "" + pX + "px " + v + "px 35px 0px rgba(0,0,0, .3), " + pXS + "px " + pYS + "px 0px 0px #006599"});
+        
+        
+    })
+    $(image).mouseleave(function(e){
+        $(image).css({transform: "translateX(-50%) rotateY(0deg) scale(1)"});
+        $(image).animate({boxShadow: "0 0 20px 0px #000"});
+    })
 });
