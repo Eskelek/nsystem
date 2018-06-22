@@ -190,7 +190,7 @@ $(function () {
 
         $(image).css({transform: "translateX(-50%) rotateY(" + pX + "deg) rotateX(" + pY +"deg) scale(1.03)"});
         
-        $(image).css({boxShadow: "" + pX + "px " + v + "px 35px 0px rgba(0,0,0, .3), " + pXS + "px " + pYS + "px 0px 0px #006599"});
+        $(image).css({boxShadow: "" + pX + "px " + v + "px 25px 0px rgba(0,0,0, .3), " + pXS + "px " + pYS + "px 0px 0px #006599"});
         
         
     })
