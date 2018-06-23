@@ -1,7 +1,12 @@
 $(function () {
     'use strict';
+    //preloader
     $(".preloader").addClass("complete")
     
+    //browsers
+    var isFirefox = typeof InstallTrigger !== 'undefined';
+    var isIE = /*@cc_on!@*/false || !!document.documentMode;
+    var isEdge = !isIE && !!window.StyleMedia;
     //pokazywanie menu na mobile
     $(".fa-bars").click(function(){
         let mB = $(".menuButton");
@@ -171,28 +176,31 @@ $(function () {
     
     $(image).mousemove(function(e){
         
-        let posX = e.layerX;
-        let posY = e.layerY;
-        
-        let pX = posX / 20;
-        let pY = posY / 20 - 2 * (posY / 15);
-        
-        let pXS = posX / 40;
-        let pYS = posY / 40;
-        
-        let v
-        
-        if(posY > 0) {
-            v = -pY
+        if(isFirefox || isEdge || isIE){
+            console.log("sorry - foxes and edges has allergies for this;/")
         } else {
-            v = -pY
-        }
+        
+            let posX = e.layerX;
+            let posY = e.layerY;
 
-        $(image).css({transform: "translateX(-50%) rotateY(" + pX + "deg) rotateX(" + pY +"deg) scale(1.03)"});
-        
-        $(image).css({boxShadow: "" + pX + "px " + v + "px 25px 0px rgba(0,0,0, .3), " + pXS + "px " + pYS + "px 0px 0px #006599"});
-        
-        
+            let pX = posX / 20;
+            let pY = posY / 20 - 2 * (posY / 15);
+
+            let pXS = posX / 40;
+            let pYS = posY / 40;
+
+            let v
+
+            if(posY > 0) {
+                v = -pY
+            } else {
+                v = -pY
+            }
+
+            $(image).css({transform: "translateX(-50%) rotateY(" + pX + "deg) rotateX(" + pY +"deg) scale(1.03)"});
+
+            $(image).css({boxShadow: "" + pX + "px " + v + "px 60px 0px rgba(0,0,0, .5), " + pXS + "px " + pYS + "px 0px 0px #006599"});
+        }
     })
     $(image).mouseleave(function(e){
         $(image).css({transform: "translateX(-50%) rotateY(0deg) scale(1)"});
